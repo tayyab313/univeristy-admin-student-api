@@ -1,0 +1,3398 @@
+{
+	"info": {
+		"_postman_id": "3381872a-a0eb-451d-807a-52f72bc0f85a",
+		"name": "lsit-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14811930",
+		"_collection_link": "https://api444-9577.postman.co/workspace/api-Workspace~ee57ee61-8d2d-472a-9f03-43be858c190e/collection/14811930-3381872a-a0eb-451d-807a-52f72bc0f85a?action=share&source=collection_link&creator=14811930"
+	},
+	"item": [
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "this is job for php developer and having good good skills in php laravel.",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "cinnova technology",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "johar Town lahore",
+									"type": "text"
+								},
+								{
+									"key": "contact_email",
+									"value": "stradh@dasd.com",
+									"type": "text"
+								},
+								{
+									"key": "created_by",
+									"value": "1",
+									"description": "must be an integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}job/store",
+							"host": [
+								"{{base_url}}job"
+							],
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "PHP Developer",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "this is job for php developer and having good good skills in php laravel.",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "stack tech",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "johar Town lahore",
+											"type": "text"
+										},
+										{
+											"key": "contact_email",
+											"value": "stradh@dasd.com",
+											"type": "text"
+										},
+										{
+											"key": "created_by",
+											"value": "1",
+											"description": "must be an integer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}job/save",
+									"host": [
+										"{{base_url}}job"
+									],
+									"path": [
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 19:15:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 19:15:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Job created successfully!\",\n    \"data\": {\n        \"title\": \"PHP Developer\",\n        \"company\": \"stack tech\",\n        \"location\": \"johar Town lahore\",\n        \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n        \"contact_email\": \"stradh@dasd.com\",\n        \"created_by\": \"1\",\n        \"updated_at\": \"2024-06-29T19:15:14.000000Z\",\n        \"created_at\": \"2024-06-29T19:15:14.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}job/show",
+							"host": [
+								"{{base_url}}job"
+							],
+							"path": [
+								"show"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}job/show",
+									"host": [
+										"{{base_url}}job"
+									],
+									"path": [
+										"show"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 19:50:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 19:50:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Job listing\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"PHP Developer\",\n                \"company\": \"stack tech\",\n                \"location\": \"johar Town lahore\",\n                \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n                \"contact_email\": \"stradh@dasd.com\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-29T19:15:14.000000Z\",\n                \"updated_at\": \"2024-06-29T19:15:14.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Javascripti Develoepr\",\n                \"company\": \"stack tech\",\n                \"location\": \"johar Town lahore\",\n                \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n                \"contact_email\": \"stradh@dasd.com\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-29T19:26:20.000000Z\",\n                \"updated_at\": \"2024-06-29T19:26:20.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Javascript Developer\",\n                \"company\": \"stack tech\",\n                \"location\": \"johar Town lahore\",\n                \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n                \"contact_email\": \"stradh@dasd.com\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-29T19:26:27.000000Z\",\n                \"updated_at\": \"2024-06-29T19:26:27.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/job/show?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/job/show?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/job/show?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/job/show\",\n        \"per_page\": 50,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "CS-301",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "CSS / HTML",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "BSIT",
+									"type": "text"
+								},
+								{
+									"key": "semester",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "credit_hour",
+									"value": "08",
+									"type": "text"
+								},
+								{
+									"key": "created_by",
+									"value": "1",
+									"description": "must be an integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}course/create",
+							"host": [
+								"{{base_url}}course"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "code",
+											"value": "CS-205",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Programming Fundamental",
+											"type": "text"
+										},
+										{
+											"key": "department",
+											"value": "BSIT",
+											"type": "text"
+										},
+										{
+											"key": "semester",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "credit_hour",
+											"value": "03",
+											"type": "text"
+										},
+										{
+											"key": "created_by",
+											"value": "1",
+											"description": "must be an integer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}course/create",
+									"host": [
+										"{{base_url}}course"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:08:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:08:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Course Added successfully!\",\n    \"data\": {\n        \"code\": \"CS-205\",\n        \"name\": \"Programming Fundamental\",\n        \"department\": \"BSIT\",\n        \"semester\": \"4\",\n        \"credit_hour\": \"03\",\n        \"created_by\": \"1\",\n        \"updated_at\": \"2024-06-30T17:08:09.000000Z\",\n        \"created_at\": \"2024-06-30T17:08:09.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}course/list",
+							"host": [
+								"{{base_url}}course"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}course/list",
+									"host": [
+										"{{base_url}}course"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:14:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:14:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Course listing\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"code\": \"CS-205\",\n                \"name\": \"Programming Fundamental\",\n                \"department\": \"BSIT\",\n                \"semester\": \"4\",\n                \"credit_hour\": \"03\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-30T17:08:09.000000Z\",\n                \"updated_at\": \"2024-06-30T17:08:09.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/course/list?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/course/list?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/course/list?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/course/list\",\n        \"per_page\": 50,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "course Registration",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}course-registeration/2/register",
+							"host": [
+								"{{base_url}}course-registeration"
+							],
+							"path": [
+								"2",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add course",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}course-registeration/1/register",
+									"host": [
+										"{{base_url}}course-registeration"
+									],
+									"path": [
+										"1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:25:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:25:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"You Registered in course successfully just wait for Admin approved!\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "student course list for registeration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}course/list",
+							"host": [
+								"{{base_url}}course"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}job/show",
+									"host": [
+										"{{base_url}}job"
+									],
+									"path": [
+										"show"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 19:50:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 19:50:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Job listing\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"PHP Developer\",\n                \"company\": \"stack tech\",\n                \"location\": \"johar Town lahore\",\n                \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n                \"contact_email\": \"stradh@dasd.com\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-29T19:15:14.000000Z\",\n                \"updated_at\": \"2024-06-29T19:15:14.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Javascripti Develoepr\",\n                \"company\": \"stack tech\",\n                \"location\": \"johar Town lahore\",\n                \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n                \"contact_email\": \"stradh@dasd.com\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-29T19:26:20.000000Z\",\n                \"updated_at\": \"2024-06-29T19:26:20.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Javascript Developer\",\n                \"company\": \"stack tech\",\n                \"location\": \"johar Town lahore\",\n                \"description\": \"this is job for php developer and having good good skills in php laravel.\",\n                \"contact_email\": \"stradh@dasd.com\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-29T19:26:27.000000Z\",\n                \"updated_at\": \"2024-06-29T19:26:27.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/job/show?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/job/show?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/job/show?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/job/show\",\n        \"per_page\": 50,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+						},
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}course/list",
+									"host": [
+										"{{base_url}}course"
+									],
+									"path": [
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:14:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:14:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Course listing\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"code\": \"CS-205\",\n                \"name\": \"Programming Fundamental\",\n                \"department\": \"BSIT\",\n                \"semester\": \"4\",\n                \"credit_hour\": \"03\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-30T17:08:09.000000Z\",\n                \"updated_at\": \"2024-06-30T17:08:09.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/course/list?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/course/list?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/course/list?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/course/list\",\n        \"per_page\": 50,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "pending approval",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}course-registeration/pending-approvals",
+							"host": [
+								"{{base_url}}course-registeration"
+							],
+							"path": [
+								"pending-approvals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}course-registeration/pending-approvals",
+									"host": [
+										"{{base_url}}course-registeration"
+									],
+									"path": [
+										"pending-approvals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:45:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 17:45:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"pending approval course list\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"course_id\": 1,\n            \"student_id\": 2,\n            \"is_approved\": 0,\n            \"created_at\": \"2024-06-30T17:25:58.000000Z\",\n            \"updated_at\": \"2024-06-30T17:25:58.000000Z\",\n            \"course\": {\n                \"id\": 1,\n                \"code\": \"CS-205\",\n                \"name\": \"Programming Fundamental\",\n                \"department\": \"BSIT\",\n                \"semester\": \"4\",\n                \"credit_hour\": \"03\",\n                \"created_by\": 1,\n                \"created_at\": \"2024-06-30T17:08:09.000000Z\",\n                \"updated_at\": \"2024-06-30T17:08:09.000000Z\"\n            },\n            \"student\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "approved",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}course-registeration/2/approve",
+							"host": [
+								"{{base_url}}course-registeration"
+							],
+							"path": [
+								"2",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "getCardDetail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}student/get-card-detail/6",
+							"host": [
+								"{{base_url}}student"
+							],
+							"path": [
+								"get-card-detail",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCardDetail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}student/get-card-detail/2",
+									"host": [
+										"{{base_url}}student"
+									],
+									"path": [
+										"get-card-detail",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 21:00:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 21:00:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Farrukh Awais\",\n        \"email\": \"tayyab@gmail.com\",\n        \"address\": \"johar Town lahore\",\n        \"phone_no\": \"+923061212122\",\n        \"create_date\": \"29-Jun-2024\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "approvedCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}course-registeration/courses/2/approved",
+							"host": [
+								"{{base_url}}course-registeration"
+							],
+							"path": [
+								"courses",
+								"2",
+								"approved"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}course-registeration/courses/2/approved",
+									"host": [
+										"{{base_url}}course-registeration"
+									],
+									"path": [
+										"courses",
+										"2",
+										"approved"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 18:02:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 18:02:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"course_id\": 1,\n        \"student_id\": 2,\n        \"is_approved\": 1,\n        \"created_at\": \"2024-06-30T17:25:58.000000Z\",\n        \"updated_at\": \"2024-06-30T17:57:26.000000Z\",\n        \"course\": {\n            \"id\": 1,\n            \"code\": \"CS-205\",\n            \"name\": \"Programming Fundamental\",\n            \"department\": \"BSIT\",\n            \"semester\": \"4\",\n            \"credit_hour\": \"03\",\n            \"created_by\": 1,\n            \"created_at\": \"2024-06-30T17:08:09.000000Z\",\n            \"updated_at\": \"2024-06-30T17:08:09.000000Z\"\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "fileUpload",
+			"item": [
+				{
+					"name": "uploadGrade",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|D7p2Vm55EbSBxb2puKteZv8WiMWT5x7mXAiXYhUifa83a152",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Hamza Khan/Downloads/file-example_PDF_1MB.pdf"
+								},
+								{
+									"key": "student_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}upload/grades",
+							"host": [
+								"{{base_url}}upload"
+							],
+							"path": [
+								"grades"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "uploadGrade",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Hamza Khan/Downloads/file-example_PDF_1MB.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}upload/grades",
+									"host": [
+										"{{base_url}}upload"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 21:37:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 21:37:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"File uploaded successfully\",\n    \"file\": {\n        \"file_name\": \"1719697065_file-example_PDF_1MB.pdf\",\n        \"file_path\": \"uploads/grades/1719697065_file-example_PDF_1MB.pdf\",\n        \"file_type\": \"grades\",\n        \"upload_by_id\": 1,\n        \"updated_at\": \"2024-06-29T21:37:45.000000Z\",\n        \"created_at\": \"2024-06-29T21:37:45.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "uploadFees",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Hamza Khan/Downloads/file-example_PDF_1MB.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}upload/fees",
+							"host": [
+								"{{base_url}}upload"
+							],
+							"path": [
+								"fees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "uploadFile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Hamza Khan/Downloads/file-example_PDF_1MB.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}upload/fees",
+									"host": [
+										"{{base_url}}upload"
+									],
+									"path": [
+										"fees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 21:42:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Jun 2024 21:42:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"File uploaded successfully\",\n    \"file\": {\n        \"file_name\": \"1719697329_file-example_PDF_1MB.pdf\",\n        \"file_path\": \"uploads/fees/1719697329_file-example_PDF_1MB.pdf\",\n        \"file_type\": \"fees\",\n        \"upload_by_id\": 1,\n        \"updated_at\": \"2024-06-29T21:42:09.000000Z\",\n        \"created_at\": \"2024-06-29T21:42:09.000000Z\",\n        \"id\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch-fees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|byExClqsS83FXRb3TYfLcTm2PG2s8UA2YF7UBVOU72b3e91f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}upload/fetch-fees/grades",
+							"host": [
+								"{{base_url}}upload"
+							],
+							"path": [
+								"fetch-fees",
+								"grades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getgradeAginstStudent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|D7p2Vm55EbSBxb2puKteZv8WiMWT5x7mXAiXYhUifa83a152",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}fetch-grade/student/2",
+							"host": [
+								"{{base_url}}fetch-grade"
+							],
+							"path": [
+								"student",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}login",
+							"host": [
+								"{{base_url}}login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login-api",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}login",
+									"host": [
+										"{{base_url}}login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jul 2024 18:50:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jul 2024 18:50:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"1|Fu66jUtfSPoQXYs9EAPGomGdbprfHFVYdBGDOvan44ae9a57\",\n    \"token_type\": \"Bearer\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|byExClqsS83FXRb3TYfLcTm2PG2s8UA2YF7UBVOU72b3e91f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}logout",
+							"host": [
+								"{{base_url}}logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}logout",
+									"host": [
+										"{{base_url}}logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jul 2024 19:38:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jul 2024 19:38:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "Get student Detail",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}admin/student/show/4",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"student",
+										"show",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get student Detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}admin/student/show/4",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"show",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:21:35 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:21:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student Detail\",\n    \"data\": {\n        \"student\": {\n            \"id\": 4,\n            \"name\": \"Ashar Khan\",\n            \"email\": \"ashar@gmail.com\",\n            \"stautus\": 1,\n            \"date_of_birth\": \"01-09-2024\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Tayyab Khan12",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ashar@gmail.com21",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "01-09-2024",
+											"description": "day-month-year",
+											"type": "text"
+										},
+										{
+											"key": "student_id",
+											"value": "CS-00012",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}admin/student/create",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"student",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "11|DJcKi0xR6fmLf1Qimft7GeNMm0koBhFB6VFGIW2v2d9ac210",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}admin/student/list",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"student",
+										"list"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Student List",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}admin/student/list",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"list"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:38:33 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:38:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student listing\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Student User\",\n            \"email\": \"student@gmail.com\",\n            \"stautus\": 1,\n            \"date_of_birth\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Tayyab Khan\",\n            \"email\": \"ashar@gmail.com\",\n            \"stautus\": 0,\n            \"date_of_birth\": \"20-10-2023\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Tayyab Khan",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "20-10-2023",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}admin/student/update/4",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"student",
+										"update",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Tayyab Khan",
+													"type": "text"
+												},
+												{
+													"key": "date_of_birth",
+													"value": "20-10-2023",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}admin/student/update/4",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"update",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:30:04 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:30:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student updated successfully\",\n    \"data\": {\n        \"student\": {\n            \"id\": 4,\n            \"name\": \"Tayyab Khan\",\n            \"email\": \"ashar@gmail.com\",\n            \"email_verified_at\": null,\n            \"c_password\": \"$2y$12$mbDlTMpEl2P6K3r/jwo9qOnQYxEEa6AUA9YBfiEBWTDjjabQf9BCy\",\n            \"role\": \"student\",\n            \"created_at\": \"2024-07-10T17:07:28.000000Z\",\n            \"updated_at\": \"2024-07-10T17:30:04.000000Z\",\n            \"status\": \"0\",\n            \"date_of_birth\": \"20-10-2023\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}admin/student/delete/4",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"student",
+										"delete",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Student",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}admin/student/delete/4",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"delete",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:56:05 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:56:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student deleted successfully\",\n    \"data\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Password Change",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "10|fQE1272Dhd9fnu4uiV1UNFJYIMWNa6jIEQMe3T2tea239c89",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "11223344",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "11223344",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}student/change-password",
+									"host": [
+										"{{base_url}}student"
+									],
+									"path": [
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCardDetail for updating card",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}student/get-card-detail/5",
+									"host": [
+										"{{base_url}}student"
+									],
+									"path": [
+										"get-card-detail",
+										"5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getCardDetail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}student/get-card-detail/2",
+											"host": [
+												"{{base_url}}student"
+											],
+											"path": [
+												"get-card-detail",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 29 Jun 2024 21:00:42 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 29 Jun 2024 21:00:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Farrukh Awais\",\n        \"email\": \"tayyab@gmail.com\",\n        \"address\": \"johar Town lahore\",\n        \"phone_no\": \"+923061212122\",\n        \"create_date\": \"29-Jun-2024\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create card",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Tayyab Khan",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ashar@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_no",
+											"value": "+9230612121213",
+											"description": "format like +923061212122 or 03061212122",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "johar Town lahore",
+											"type": "text"
+										},
+										{
+											"key": "student_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}student/card-create",
+									"host": [
+										"{{base_url}}student"
+									],
+									"path": [
+										"card-create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Tayyab khan",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "tayyab@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "phone_no",
+													"value": "+923061212122",
+													"description": "format like +923061212122 or 03061212122",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "johar Town lahore",
+													"type": "text"
+												},
+												{
+													"key": "student_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}student/card-create",
+											"host": [
+												"{{base_url}}student"
+											],
+											"path": [
+												"card-create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 29 Jun 2024 20:43:46 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 29 Jun 2024 20:43:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student card created or updated successfully!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Tayyab khan\",\n        \"email\": \"tayyab@gmail.com\",\n        \"phone_no\": \"+923061212122\",\n        \"address\": \"johar Town lahore\",\n        \"student_id\": \"2\",\n        \"created_at\": \"2024-06-29T20:20:40.000000Z\",\n        \"updated_at\": \"2024-06-29T20:43:46.000000Z\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Staff",
+					"item": [
+						{
+							"name": "Get staff Detail",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}admin/staff/show/7",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"show",
+										"7"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get student Detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}admin/student/show/4",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"show",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:21:35 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:21:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student Detail\",\n    \"data\": {\n        \"student\": {\n            \"id\": 4,\n            \"name\": \"Ashar Khan\",\n            \"email\": \"ashar@gmail.com\",\n            \"stautus\": 1,\n            \"date_of_birth\": \"01-09-2024\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Staff",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Ahamd Raza",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "raz@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "01-09-2024",
+											"description": "day-month-year",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}admin/staff/create",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get staff List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "11|DJcKi0xR6fmLf1Qimft7GeNMm0koBhFB6VFGIW2v2d9ac210",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}admin/staff/list",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"list"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Student List",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}admin/student/list",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"list"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:38:33 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:38:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student listing\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Student User\",\n            \"email\": \"student@gmail.com\",\n            \"stautus\": 1,\n            \"date_of_birth\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Tayyab Khan\",\n            \"email\": \"ashar@gmail.com\",\n            \"stautus\": 0,\n            \"date_of_birth\": \"20-10-2023\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update staff",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "sir Raza khan",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "20-10-2023",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}admin/staff/update/7",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"update",
+										"7"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Tayyab Khan",
+													"type": "text"
+												},
+												{
+													"key": "date_of_birth",
+													"value": "20-10-2023",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}admin/student/update/4",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"update",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:30:04 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:30:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student updated successfully\",\n    \"data\": {\n        \"student\": {\n            \"id\": 4,\n            \"name\": \"Tayyab Khan\",\n            \"email\": \"ashar@gmail.com\",\n            \"email_verified_at\": null,\n            \"c_password\": \"$2y$12$mbDlTMpEl2P6K3r/jwo9qOnQYxEEa6AUA9YBfiEBWTDjjabQf9BCy\",\n            \"role\": \"student\",\n            \"created_at\": \"2024-07-10T17:07:28.000000Z\",\n            \"updated_at\": \"2024-07-10T17:30:04.000000Z\",\n            \"status\": \"0\",\n            \"date_of_birth\": \"20-10-2023\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "9|KxOOhmIlmAKEnqdqsJ1GgzriYtZqRLfzB2gEBKtP5b4dfc25",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}admin/staff/delete/4",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"delete",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Student",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}admin/student/delete/4",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"student",
+												"delete",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:56:05 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 10 Jul 2024 17:56:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Student deleted successfully\",\n    \"data\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Assign Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "12|amGq9X6jXkqKnTYW0M9BEpoSWBywhZXrxsRytqxL7335b8ec",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_ids\": [1,2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}admin/staff/7/assign-courses",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"7",
+										"assign-courses"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Assign Course",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"course_ids\": [1,2]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}admin/staff/7/assign-courses",
+											"host": [
+												"{{base_url}}admin"
+											],
+											"path": [
+												"staff",
+												"7",
+												"assign-courses"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Jul 2024 18:41:11 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Jul 2024 18:41:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.17"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Courses assigned to staff member successfully\",\n    \"data\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "get assigned course list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "12|amGq9X6jXkqKnTYW0M9BEpoSWBywhZXrxsRytqxL7335b8ec",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}admin/staff/7/courses",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"staff",
+										"7",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|amGq9X6jXkqKnTYW0M9BEpoSWBywhZXrxsRytqxL7335b8ec",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}profile/edit/2",
+							"host": [
+								"{{base_url}}profile"
+							],
+							"path": [
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|amGq9X6jXkqKnTYW0M9BEpoSWBywhZXrxsRytqxL7335b8ec",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "king khan",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "student@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "09-12-2022",
+									"type": "text"
+								},
+								{
+									"key": "student_id",
+									"value": "CS-109",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}profile/update/2",
+							"host": [
+								"{{base_url}}profile"
+							],
+							"path": [
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "sendMessage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|nuC7nOJPxwBccLhn1WjBH7nPyWrlgC5RuWSyZihAe8a7f90b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "receiver_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "yes please tell me what kind of problme you hve",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}send/messages",
+							"host": [
+								"{{base_url}}send"
+							],
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|nuC7nOJPxwBccLhn1WjBH7nPyWrlgC5RuWSyZihAe8a7f90b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}get/messages/2",
+							"host": [
+								"{{base_url}}get"
+							],
+							"path": [
+								"messages",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "studentList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|nuC7nOJPxwBccLhn1WjBH7nPyWrlgC5RuWSyZihAe8a7f90b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}admin/chat/students",
+							"host": [
+								"{{base_url}}admin"
+							],
+							"path": [
+								"chat",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adminDetail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|nuC7nOJPxwBccLhn1WjBH7nPyWrlgC5RuWSyZihAe8a7f90b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}get/admin/detail",
+							"host": [
+								"{{base_url}}get"
+							],
+							"path": [
+								"admin",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
