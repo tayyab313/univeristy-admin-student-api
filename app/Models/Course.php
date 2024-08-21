@@ -12,7 +12,10 @@ class Course extends Model
     {
         return $this->belongsTo(User::class, 'created_by');
     }
-
+    public function students()
+    {
+        return $this->belongsToMany(User::class, 'course_registrations', 'course_id', 'student_id');
+    }
     public function registrations()
     {
         return $this->hasMany(CourseRegistration::class, 'course_id');
@@ -26,4 +29,9 @@ class Course extends Model
     {
         return $this->belongsToMany(User::class, 'course_staff', 'course_id', 'staff_id');
     }
+    public function attendances()
+    {
+        return $this->hasMany(Attendance::class);
+    }
+
 }

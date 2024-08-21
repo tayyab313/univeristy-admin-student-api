@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CourseRegistrationController;
 use App\Http\Controllers\FileUploadController;
@@ -48,6 +50,12 @@ Route::prefix('course')->group(function(){
         Route::get('/list',  'index'); // Students view courses
     });
 });
+
+
+Route::post('/login', [AuthController::class, 'login']);
+
+// Routes under 'upload' prefix protected by Sanctum middleware
+Route::middleware(['auth:sanctum'])->group(function () {
 Route::prefix('course-registeration')->group(function(){
     Route::controller(CourseRegistrationController::class)->group(function(){
         Route::post('/{course_id}/register',  'store'); //student add course
@@ -56,11 +64,6 @@ Route::prefix('course-registeration')->group(function(){
         Route::get('/courses/{student_id}/approved', 'approvedCourses'); // Student views approved courses
     });
 });
-
-Route::post('/login', [AuthController::class, 'login']);
-
-// Routes under 'upload' prefix protected by Sanctum middleware
-Route::middleware(['auth:sanctum'])->group(function () {
 Route::post('/logout', [AuthController::class, 'logout']);
     Route::prefix('upload')->group(function(){
         Route::controller(FileUploadController::class)->group(function(){
@@ -102,5 +105,18 @@ Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('get/admin/detail', [MessageController::class, 'getAdmin']);
     Route::controller(FileUploadController::class)->group(function(){
         Route::get('/fetch-grade/student/{user}',  'fetchGradebyStudent');
+    });
+    // attendance staff to student api
+    Route::prefix('staff')->controller(staffController::class)->group(function(){
+        Route::get('/assign-courses', 'getAssignCourses')->name('staff.getAssignCourses');
+        Route::get('/getCourseStudent/{course}', 'getCourseStudent')->name('staff.getCourseStudent');
+        Route::post('/mark-student-attendance','markAttendance')->name('staff.markAttendance');
+    });
+    Route::prefix('book')->controller(BookController::class)->group(function(){
+        Route::get('/get', 'index');
+        Route::get('/bookDetail/{id}', 'show');
+        Route::post('/store', 'store');
+        Route::post('/edit/{id}', 'update');
+        Route::delete('/delete/{id}', 'destroy');
     });
 });

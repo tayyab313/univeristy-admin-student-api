@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\sudentCardCreateRequest;
 use App\Http\Resources\student\getCardDetailResource;
 use App\Http\Resources\student\GetStudentResource;
+use App\Models\Attendance;
+use App\Models\Course;
 use App\Models\StudentCard;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -12,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 
 class staffController extends Controller
 {
@@ -146,6 +149,75 @@ class staffController extends Controller
         // Get the courses assigned to the staff member
         $courses = $staff->courses()->get();
         return response()->success(['courses'=> $courses],'Assigned Courses list');
+    }
+    public function getAssignCourses()
+    {
+        $staff = Auth::user();
+        // Ensure the user is a staff member
+        if ($staff->role !== 'staff') {
+            return response()->json(['message' => 'The specified user is not a staff member'], 400);
+        }
+        // Get the courses assigned to the staff member
+        $courses = $staff->courses()->get();
+        return response()->success(['courses'=> $courses],'Assigned Courses list');
+    }
+    public function getCourseStudent($course)
+    {
+        $course = Course::with(['students' => function ($q){
+            $q->where('is_approved',1)->get();
+        }])->find($course);
+
+        return response()->success(['Student'=> $course->students ?? []],'Student List');
+    }
+    public function markAttendance(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'course_id' => 'required|exists:courses,id',
+            'students' => 'required|array',
+            'students.*.id' => 'required|exists:users,id',
+            'students.*.attendance' => 'required|in:present,absent,leave',
+        ]);
+
+        // Custom validation to check if attendance is already marked for the day
+        $validator->after(function ($validator) use ($request) {
+            $courseId = $request->input('course_id');
+            $today = now()->toDateString();
+            foreach ($request->input('students') as $student) {
+                $studentId = $student['id'];
+
+                $attendanceExists = Attendance::where('student_id', $studentId)
+                    ->where('course_id', $courseId)
+                    ->where('date', $today)
+                    ->exists();
+
+                if ($attendanceExists) {
+                    $validator->errors()->add('students.' . $studentId, "Attendance has already been marked for student ID {$studentId} for today.");
+                }
+            }
+        });
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400);
+        }
+
+        $courseId = $request->input('course_id');
+        $students = $request->input('students');
+        $today = now()->toDateString();
+
+        foreach ($students as $student) {
+            Attendance::updateOrCreate(
+                [
+                    'student_id' => $student['id'],
+                    'course_id' => $courseId,
+                    'date' => $today,
+                ],
+                [
+                    'attendance' => $student['attendance'],
+                ]
+            );
+        }
+
+        return response()->json(['message' => 'Attendance marked successfully.']);
     }
 
 }
