@@ -50,5 +50,31 @@ class AttendanceController extends Controller
         ]);
         return Response::success($attendance, 'Attendance marked successfully');
     }
+    public function showStudentAttendance(Request $request)
+    {
+        $request->validate([
+            'course_id' => 'required|exists:courses,id',
+            'date' => 'required|date',
+        ]);
+
+        $user = auth()->user();
+
+        // Check if the user is a student
+        if ($user->role !== 'student') {
+            return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        // Fetch the attendance record
+        $attendance = Attendance::with('course')->where('student_id', $user->id)
+            ->where('course_id', $request->course_id)
+            ->where('date', $request->date)
+            ->first();
+
+        if (!$attendance) {
+            return response()->json(['message' => 'No attendance record found'], 404);
+        }
+        return Response::success($attendance, 'Student Attendance');
+
+    }
 
 }

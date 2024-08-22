@@ -94,6 +94,8 @@ class AuthController extends Controller
     public function updateProfileDetail($id,Request $request)
     {
         try {
+             // Determine if the authenticated user is a student
+            $isStudent = auth()->user()->role === 'student';
             // Validate the request data
             $validator = Validator::make($request->all(), [
                 'name' => 'required|string|max:255',
@@ -105,9 +107,9 @@ class AuthController extends Controller
                     Rule::unique('users')->ignore($id), // Ignore the current user's email
                 ],
                 'student_id' => [
-                    'required',
+                    $isStudent ? 'required' : 'nullable', // Validate student_id if the user is a student
                     'string',
-                    Rule::unique('users')->ignore($id), // Ignore the current user's email
+                    Rule::unique('users')->ignore($id),
                 ],
             ]);
 
