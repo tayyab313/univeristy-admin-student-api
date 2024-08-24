@@ -164,14 +164,22 @@ class staffController extends Controller
     }
     public function getCourseStudent($course)
     {
-        $course = Course::with(['students' => function ($q){
-            $q->where('is_approved',1)->with(['attendances' => function ($query) {
+        $course = Course::with(['students' => function ($q) {
+            $q->where('is_approved', 1)->with(['attendances' => function ($query) {
                 $query->whereDate('date', Carbon::today()) // Filter for today's date
-                ->select('student_id', 'attendance', 'date'); // Select necessary columns
+                    ->select('student_id', 'attendance'); // Select necessary columns
             }]);
         }])->find($course);
 
-        return response()->success(['Student'=> $course->students ?? []],'Student List');
+        // Modify the response to get attendance as a key with the attendance value
+        $students = $course->students->map(function ($student) {
+            $attendance = $student->attendances->first(); // Assuming only one attendance record per day
+            $student->attendance = $attendance ? $attendance->attendance : null; // Assign the attendance value to 'attendance' key
+            unset($student->attendances); // Remove the 'attendances' key
+            return $student;
+        });
+
+        return response()->success(['Student' => $students], 'Student List');
     }
     public function markAttendance(Request $request)
     {
