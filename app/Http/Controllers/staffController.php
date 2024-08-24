@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 use Exception;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class staffController extends Controller
@@ -164,7 +165,10 @@ class staffController extends Controller
     public function getCourseStudent($course)
     {
         $course = Course::with(['students' => function ($q){
-            $q->where('is_approved',1)->get();
+            $q->where('is_approved',1)->with(['attendances' => function ($query) {
+                $query->whereDate('date', Carbon::today()) // Filter for today's date
+                ->select('student_id', 'attendance', 'date'); // Select necessary columns
+            }]);
         }])->find($course);
 
         return response()->success(['Student'=> $course->students ?? []],'Student List');
